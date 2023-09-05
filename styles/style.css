@@ -120,39 +120,58 @@ nav li a {
   background: #4EC5F7;
 }
 
+.banner-img img {
+  width: 100%;
+}
+
 
 /*Media Query for Responsive Design.*/
 
 /* Styles for Small Devices. */
 
 @media screen and (max-width:576px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
 
+  nav,
   nav>ul {
     flex-direction: column;
+    align-items: center;
   }
 
   nav ul li {
     margin: 35px 0 0;
   }
+
+  .banner-section {
+    background-position: bottom left;
+    background-size: 100%;
+  }
+
+  .banner-container {
+    flex-direction: column-reverse;
+  }
+
 }
 
 /* Styles for Medium Devices */
 
 @media screen and (min-width:576px) and (max-width:960px) {
-  nav {
+
+  nav,
+  nav>ul {
     flex-direction: column;
     align-items: center;
   }
 
-  nav>ul {
-    flex-direction: column;
-  }
-
   nav ul li {
     margin: 35px 0 0;
+  }
+
+  .banner-section {
+    background-position: bottom left;
+    background-size: auto;
+  }
+
+  .banner-container {
+    flex-direction: column-reverse;
   }
 }

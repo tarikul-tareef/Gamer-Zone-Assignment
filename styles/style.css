@@ -5,6 +5,10 @@
   font-family: 'Work Sans', sans-serif;
 }
 
+.section {
+  margin-top: 120px;
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -12,18 +16,37 @@
 
 .feature-text {
   color: #534C64;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
   margin-bottom: 16px;
 }
 
 button {
   color: #FFF;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   padding: 20px 40px;
   border-radius: 48px;
   border: 0;
+}
+
+.section-title {
+  color: #0B0223;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.section-title span {
+  background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-description {
+  color: #534C64;
+  font-size: 1.125rem;
+  font-weight: 400;
 }
 
 /* Header Section styles */
@@ -43,7 +66,7 @@ nav {
 
 .logo-text {
   color: #0B0223;
-  font-size: 45px;
+  font-size: 2.8rem;
   font-weight: 700;
 }
 
@@ -58,7 +81,7 @@ nav>ul {
 
 nav ul li {
   list-style: none;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   margin-left: 2rem;
 }
@@ -124,12 +147,40 @@ nav li a {
   width: 100%;
 }
 
+/* Funny Videos Section Styles */
+.section-content {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.video-items-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.video-item img {
+  width: 100%;
+}
+
+.video-item p {
+  color: #534C64;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 24px;
+}
+
 
 /*Media Query for Responsive Design.*/
 
 /* Styles for Small Devices. */
 
 @media screen and (max-width:576px) {
+
+  .section {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 
   nav,
   nav>ul {
@@ -148,13 +199,28 @@ nav li a {
 
   .banner-container {
     flex-direction: column-reverse;
+    gap: 20px;
   }
 
+
+  .video-items-container {
+    grid-template-columns: 1fr;
+    margin: 0 50px;
+  }
+
+  .video-item {
+    text-align: center;
+  }
 }
 
 /* Styles for Medium Devices */
 
 @media screen and (min-width:576px) and (max-width:960px) {
+
+  .section {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 
   nav,
   nav>ul {
@@ -173,5 +239,12 @@ nav li a {
 
   .banner-container {
     flex-direction: column-reverse;
+    gap: 20px;
   }
+
+  .video-items-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 50px;
+  }
+
 }

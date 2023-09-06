@@ -1,4 +1,4 @@
-/* Common Shared Styles */
+/* -----------Common Shared Styles---------*/
 * {
   margin: 0;
   padding: 0;
@@ -32,6 +32,7 @@ button {
   padding: 20px 40px;
   border-radius: 48px;
   border: 0;
+  cursor: pointer;
 }
 
 .section-title {
@@ -54,8 +55,8 @@ button {
   font-weight: 400;
 }
 
-/* Header Section styles */
-/* Navbar Styles */
+/* ============ Header Section styles ============= */
+/* ----------- Navbar Styles ---------- */
 nav {
   display: flex;
   justify-content: space-between;
@@ -105,7 +106,7 @@ nav li a {
   margin-left: 20px;
 }
 
-/* Banner Section Styles */
+/* ----------- Banner Section Styles ------------ */
 
 .banner-section {
   background-image: url(../images/Group\ 14.png);
@@ -148,7 +149,7 @@ nav li a {
   width: 100%;
 }
 
-/* Funny Videos Section Styles */
+/* --------- Funny Videos Section Styles -------- */
 .section-content {
   text-align: center;
   margin-bottom: 48px;
@@ -160,15 +161,53 @@ nav li a {
   gap: 24px;
 }
 
-.video-item img {
+.video-container {
+  position: relative;
+  display: inline-block;
+}
+
+.video-container>img {
   width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.watch_now-text {
+  color: #FF42A5;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+.video-container:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.video-container:hover {
+  border-radius: 16px;
+  border: 4px solid #FF42A5;
 }
 
 .video-item p {
   margin-top: 24px;
 }
 
-/* Feature Section Style */
+/* ---------- Feature Section Style ---------- */
 
 .feature-section {
   display: flex;
@@ -200,7 +239,7 @@ nav li a {
   width: 100%;
 }
 
-/* Games Category Styles */
+/* --------- Games Category Styles ------------ */
 
 .game-category {
   display: flex;
@@ -228,7 +267,7 @@ nav li a {
 }
 
 
-/* Footer Section Styles */
+/* ----------- Footer Section Styles ----------- */
 
 footer {
   background-color: #0B0223;
@@ -282,9 +321,9 @@ footer .logo-text {
   text-align: center;
 }
 
-/*Media Query for Responsive Design.*/
+/* ================== Media Query for Responsive Design. ================== */
 
-/* Styles for Small Devices. */
+/* -------- Styles for Small Devices. -------- */
 
 @media screen and (max-width:600px) {
 
@@ -345,7 +384,7 @@ footer .logo-text {
   }
 }
 
-/* Styles for Medium Devices */
+/* --------- Styles for Medium Devices ------- */
 
 @media screen and (min-width:601px) and (max-width:992px) {
 

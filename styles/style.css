@@ -34,6 +34,7 @@ button {
   color: #0B0223;
   font-size: 3rem;
   font-weight: 700;
+  margin-bottom: 24px;
 }
 
 .section-title span {
@@ -164,18 +165,49 @@ nav li a {
 }
 
 .video-item p {
-  color: #534C64;
-  font-size: 1.25rem;
-  font-weight: 500;
   margin-top: 24px;
 }
+
+/* Feature Section Style */
+
+.feature-section {
+  display: flex;
+  justify-content: end;
+  gap: 120px;
+  align-items: center;
+}
+
+.feature-section .section-content {
+  text-align: right;
+  max-width: 355px;
+}
+
+.feature-banner-img {
+  margin-left: 100px;
+}
+
+.feature-banner-img img {
+  width: 100%;
+}
+
+.feature-badge-img {
+  position: relative;
+  bottom: 200px;
+  max-width: 250px;
+}
+
+.feature-badge-img img {
+  width: 100%;
+}
+
+
 
 
 /*Media Query for Responsive Design.*/
 
 /* Styles for Small Devices. */
 
-@media screen and (max-width:576px) {
+@media screen and (max-width:600px) {
 
   .section {
     margin-left: 20px;
@@ -183,7 +215,8 @@ nav li a {
   }
 
   nav,
-  nav>ul {
+  nav>ul,
+  .feature-section {
     flex-direction: column;
     align-items: center;
   }
@@ -205,17 +238,27 @@ nav li a {
 
   .video-items-container {
     grid-template-columns: 1fr;
-    margin: 0 50px;
+    margin: 0 80px;
   }
 
   .video-item {
     text-align: center;
   }
+
+  .feature-section .section-content {
+    text-align: center;
+  }
+
+  .feature-badge-img {
+    bottom: 120px;
+    max-width: 150px;
+  }
 }
+
 
 /* Styles for Medium Devices */
 
-@media screen and (min-width:576px) and (max-width:960px) {
+@media screen and (min-width:601px) and (max-width:992px) {
 
   .section {
     margin-left: 20px;
@@ -223,7 +266,8 @@ nav li a {
   }
 
   nav,
-  nav>ul {
+  nav>ul,
+  .feature-section {
     flex-direction: column;
     align-items: center;
   }
@@ -245,6 +289,10 @@ nav li a {
   .video-items-container {
     grid-template-columns: repeat(2, 1fr);
     margin: 0 50px;
+  }
+
+  .feature-section .section-content {
+    text-align: center;
   }
 
 }

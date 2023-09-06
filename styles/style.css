@@ -22,7 +22,6 @@
   color: #534C64;
   font-size: 1.25rem;
   font-weight: 500;
-  margin-bottom: 16px;
 }
 
 button {
@@ -133,6 +132,13 @@ nav li a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 24px;
+}
+
+.banner-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 .btn-pink {
